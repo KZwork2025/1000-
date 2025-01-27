@@ -89,6 +89,48 @@ footer {
     font-size: 0.9rem;
 }
 
+.map-container {
+    margin: 30px auto;
+    max-width: 600px;
+    position: relative;
+}
+
+.kz-map {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNDAwIj48cGF0aCBkPSJNNDAgMjBINzYwVjM4MEg0MFYyMFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmMzMzMyIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    border: 2px solid #ff3333;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.city {
+    position: absolute;
+    color: #ffffff;
+    background-color: rgba(255, 51, 51, 0.9);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.city:hover {
+    transform: scale(1.1);
+    background-color: #ff3333;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+.astana { top: 35%; left: 45%; }
+.almaty { bottom: 30%; right: 30%; }
+.shymkent { bottom: 20%; left: 40%; }
+.karaganda { top: 45%; left: 55%; }
+.aktobe { top: 30%; left: 20%; }
+.atyrau { top: 45%; left: 10%; }
+
 @media (max-width: 600px) {
     .container {
         padding: 10px;
