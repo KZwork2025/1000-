@@ -1,11 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
-  <path d="M40,20 L760,20 L760,380 L40,380 Z" 
-        fill="none" 
-        stroke="#ff3333" 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <!-- Контур Казахстана -->
+  <path d="M100,200 C150,180 200,150 300,140 L400,120 L500,100 L600,120 L700,150 
+           C750,170 800,200 850,250 C900,300 890,350 850,400 C800,450 700,470 600,480
+           C500,490 400,485 300,460 C200,440 150,400 120,350 C90,300 80,250 100,200 Z" 
+        fill="#FFD700" 
+        stroke="#B8860B" 
         stroke-width="2"/>
-  <path d="M150,100 Q400,50 650,150 Q700,200 650,250 Q400,350 150,300 Q100,250 150,100" 
+  
+  <!-- Внутренние границы -->
+  <path d="M300,140 C350,200 400,250 450,300 M500,100 C480,200 450,300 400,400" 
         fill="none" 
-        stroke="#ff3333" 
-        stroke-width="2"/>
+        stroke="#B8860B" 
+        stroke-width="1"
+        stroke-dasharray="5,5"/>
+  
+  <!-- Города -->
+  <g class="cities">
+    <!-- Нур-Султан -->
+    <g class="city">
+      <circle cx="450" cy="220" r="5" fill="#B8860B"/>
+      <text x="450" y="210" class="city-name">Нур-Султан</text>
+    </g>
+    
+    <!-- Петропавловск -->
+    <g class="city">
+      <circle cx="400" cy="120" r="5" fill="#B8860B"/>
+      <text x="400" y="110" class="city-name">Петропавловск</text>
+    </g>
+    
+    <!-- Костанай -->
+    <g class="city">
+      <circle cx="300" cy="180" r="5" fill="#B8860B"/>
+      <text x="300" y="170" class="city-name">Костанай</text>
+    </g>
+    
+    <!-- Павлодар -->
+    <g class="city">
+      <circle cx="600" cy="200" r="5" fill="#B8860B"/>
+      <text x="600" y="190" class="city-name">Павлодар</text>
+    </g>
+    
+    <!-- Усть-Каменогорск -->
+    <g class="city">
+      <circle cx="700" cy="250" r="5" fill="#B8860B"/>
+      <text x="700" y="240" class="city-name">Усть-Каменогорск</text>
+    </g>
+    
+    <!-- Актобе -->
+    <g class="city">
+      <circle cx="200" cy="250" r="5" fill="#B8860B"/>
+      <text x="200" y="240" class="city-name">Актобе</text>
+    </g>
+    
+    <!-- Атырау -->
+    <g class="city">
+      <circle cx="120" cy="300" r="5" fill="#B8860B"/>
+      <text x="120" y="290" class="city-name">Атырау</text>
+    </g>
+    
+    <!-- Караганда -->
+    <g class="city">
+      <circle cx="500" cy="280" r="5" fill="#B8860B"/>
+      <text x="500" y="270" class="city-name">Караганда</text>
+    </g>
+    
+    <!-- Алма-Аты -->
+    <g class="city">
+      <circle cx="650" cy="400" r="5" fill="#B8860B"/>
+      <text x="650" y="390" class="city-name">Алма-Аты</text>
+    </g>
+    
+    <!-- Шымкент -->
+    <g class="city">
+      <circle cx="450" cy="420" r="5" fill="#B8860B"/>
+      <text x="450" y="410" class="city-name">Шымкент</text>
+    </g>
+    
+    <!-- Тараз -->
+    <g class="city">
+      <circle cx="550" cy="420" r="5" fill="#B8860B"/>
+      <text x="550" y="410" class="city-name">Тараз</text>
+    </g>
+  </g>
+
+  <style>
+    .city-name {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      fill: #ffffff;
+      text-anchor: middle;
+      font-weight: bold;
+    }
+    .city:hover circle {
+      r: 7;
+      transition: r 0.3s;
+    }
+    .city:hover text {
+      font-size: 16px;
+      transition: font-size 0.3s;
+    }
+  </style>
 </svg>

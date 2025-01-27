@@ -91,16 +91,16 @@ footer {
 
 .map-container {
     margin: 30px auto;
-    max-width: 600px;
+    max-width: 800px;
     position: relative;
-    background-color: rgba(255, 51, 51, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     padding: 20px;
 }
 
 .kz-map {
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: relative;
     display: flex;
     justify-content: center;
