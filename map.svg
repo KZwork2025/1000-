@@ -5,82 +5,74 @@
            C750,170 800,200 850,250 C900,300 890,350 850,400 C800,450 700,470 600,480
            C500,490 400,485 300,460 C200,440 150,400 120,350 C90,300 80,250 100,200 Z" 
         fill="#FFD700" 
-        stroke="#B8860B" 
-        stroke-width="2"/>
+        stroke="none"/>
   
-  <!-- Внутренние границы -->
-  <path d="M300,140 C350,200 400,250 450,300 M500,100 C480,200 450,300 400,400" 
-        fill="none" 
-        stroke="#B8860B" 
-        stroke-width="1"
-        stroke-dasharray="5,5"/>
-  
-  <!-- Города -->
+  <!-- Города с маркерами в виде меток локации -->
   <g class="cities">
     <!-- Нур-Султан -->
     <g class="city">
-      <circle cx="450" cy="220" r="5" fill="#B8860B"/>
-      <text x="450" y="210" class="city-name">Нур-Султан</text>
+      <path d="M450,220 L450,210 L450,220 L445,215 L450,220 L455,215 Z" fill="#000"/>
+      <text x="450" y="205" class="city-name">Нур-Султан</text>
     </g>
     
     <!-- Петропавловск -->
     <g class="city">
-      <circle cx="400" cy="120" r="5" fill="#B8860B"/>
-      <text x="400" y="110" class="city-name">Петропавловск</text>
+      <path d="M400,120 L400,110 L400,120 L395,115 L400,120 L405,115 Z" fill="#000"/>
+      <text x="400" y="105" class="city-name">Петропавловск</text>
     </g>
     
     <!-- Костанай -->
     <g class="city">
-      <circle cx="300" cy="180" r="5" fill="#B8860B"/>
-      <text x="300" y="170" class="city-name">Костанай</text>
+      <path d="M300,180 L300,170 L300,180 L295,175 L300,180 L305,175 Z" fill="#000"/>
+      <text x="300" y="165" class="city-name">Костанай</text>
     </g>
     
     <!-- Павлодар -->
     <g class="city">
-      <circle cx="600" cy="200" r="5" fill="#B8860B"/>
-      <text x="600" y="190" class="city-name">Павлодар</text>
+      <path d="M600,200 L600,190 L600,200 L595,195 L600,200 L605,195 Z" fill="#000"/>
+      <text x="600" y="185" class="city-name">Павлодар</text>
     </g>
     
     <!-- Усть-Каменогорск -->
     <g class="city">
-      <circle cx="700" cy="250" r="5" fill="#B8860B"/>
-      <text x="700" y="240" class="city-name">Усть-Каменогорск</text>
+      <path d="M700,250 L700,240 L700,250 L695,245 L700,250 L705,245 Z" fill="#000"/>
+      <text x="700" y="235" class="city-name">Усть-Каменогорск</text>
     </g>
     
     <!-- Актобе -->
     <g class="city">
-      <circle cx="200" cy="250" r="5" fill="#B8860B"/>
-      <text x="200" y="240" class="city-name">Актобе</text>
+      <path d="M200,250 L200,240 L200,250 L195,245 L200,250 L205,245 Z" fill="#000"/>
+      <text x="200" y="235" class="city-name">Актобе</text>
     </g>
     
     <!-- Атырау -->
     <g class="city">
-      <circle cx="120" cy="300" r="5" fill="#B8860B"/>
-      <text x="120" y="290" class="city-name">Атырау</text>
+      <path d="M120,300 L120,290 L120,300 L115,295 L120,300 L125,295 Z" fill="#000"/>
+      <text x="120" y="285" class="city-name">Атырау</text>
     </g>
     
     <!-- Караганда -->
     <g class="city">
-      <circle cx="500" cy="280" r="5" fill="#B8860B"/>
-      <text x="500" y="270" class="city-name">Караганда</text>
+      <path d="M500,280 L500,270 L500,280 L495,275 L500,280 L505,275 Z" fill="#000"/>
+      <text x="500" y="265" class="city-name">Караганда</text>
     </g>
     
     <!-- Алма-Аты -->
     <g class="city">
-      <circle cx="650" cy="400" r="5" fill="#B8860B"/>
-      <text x="650" y="390" class="city-name">Алма-Аты</text>
+      <path d="M650,400 L650,390 L650,400 L645,395 L650,400 L655,395 Z" fill="#000"/>
+      <text x="650" y="385" class="city-name">Алма-Аты</text>
     </g>
     
     <!-- Шымкент -->
     <g class="city">
-      <circle cx="450" cy="420" r="5" fill="#B8860B"/>
-      <text x="450" y="410" class="city-name">Шымкент</text>
+      <path d="M450,420 L450,410 L450,420 L445,415 L450,420 L455,415 Z" fill="#000"/>
+      <text x="450" y="405" class="city-name">Шымкент</text>
     </g>
     
     <!-- Тараз -->
     <g class="city">
-      <circle cx="550" cy="420" r="5" fill="#B8860B"/>
-      <text x="550" y="410" class="city-name">Тараз</text>
+      <path d="M550,420 L550,410 L550,420 L545,415 L550,420 L555,415 Z" fill="#000"/>
+      <text x="550" y="405" class="city-name">Тараз</text>
     </g>
   </g>
 
@@ -88,13 +80,14 @@
     .city-name {
       font-family: Arial, sans-serif;
       font-size: 14px;
-      fill: #ffffff;
+      fill: #000;
       text-anchor: middle;
       font-weight: bold;
     }
-    .city:hover circle {
-      r: 7;
-      transition: r 0.3s;
+    .city:hover path {
+      transform: scale(1.2);
+      transform-origin: center;
+      transition: transform 0.3s;
     }
     .city:hover text {
       font-size: 16px;
