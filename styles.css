@@ -5,17 +5,68 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
     color: #ffffff;
-    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.content {
+    background-color: rgba(255, 51, 51, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #ff3333;
+}
+
+h1 {
+    color: #ff3333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.telegram-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ff3333;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.telegram-button:hover {
+    background-color: #ff6666;
+}
+
+.telegram-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.telegram-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
 }
 
 header {
@@ -64,79 +115,11 @@ header h2 {
     font-size: 1.1rem;
 }
 
-.telegram-button {
-    display: inline-block;
-    background-color: #ff3333;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(255, 51, 51, 0.5);
-}
-
-.telegram-button:hover {
-    background-color: #ff5555;
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 51, 51, 0.7);
-}
-
 footer {
     margin-top: 30px;
     color: #888;
     font-size: 0.9rem;
 }
-
-.map-container {
-    margin: 30px auto;
-    max-width: 800px;
-    position: relative;
-    background-color: #000;
-    border-radius: 10px;
-    padding: 20px;
-    border: 1px solid #ff3333;
-}
-
-.kz-map {
-    width: 100%;
-    height: 400px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.kz-map svg {
-    width: 100%;
-    height: 100%;
-}
-
-.city {
-    position: absolute;
-    color: #ffffff;
-    background-color: rgba(255, 51, 51, 0.9);
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 2;
-}
-
-.city:hover {
-    transform: scale(1.1);
-    background-color: #ff3333;
-    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
-}
-
-.astana { top: 35%; left: 45%; }
-.almaty { bottom: 30%; right: 30%; }
-.shymkent { bottom: 20%; left: 40%; }
-.karaganda { top: 45%; left: 55%; }
-.aktobe { top: 30%; left: 20%; }
-.atyrau { top: 45%; left: 10%; }
 
 @media (max-width: 600px) {
     .container {
